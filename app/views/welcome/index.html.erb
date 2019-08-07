@@ -1,0 +1,18 @@
+<div class="home-page-title">
+  <h1>Popular Games</h1>
+</div>
+
+<section class="games col md-col-8">
+  <ol>
+  <% @popular_games.each do |game| %>
+    <li class="game">
+        <p class="name"><h2><%= game[:name] %></p></h2>
+        <p class="min_players">Minimum players: <%= game[:min_players] %></p>
+        <p class="max_players">Maximum players: <%= game[:max_players] %></p>
+        <p class="min_playtime">Minimum playtime: <%= game[:min_playtime] %></p>
+        <p class="max_playtime">Maximum playtime: <%= game[:max_playtime] %></p>
+        <p class="description">Description: <%= game[:description] %></p>
+    </li>
+  <% end %>
+  </ol>
+</section>
